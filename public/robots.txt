@@ -1,3 +1,27 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
-Disallow:
+Allow: /
+
+# Sitemap location
+Sitemap: https://tanstack-start-starter.com/sitemap.xml
+
+# Crawl delay for polite crawling
+Crawl-delay: 2
+
+# Specific rules for different bots
+User-agent: Googlebot
+Disallow: /private/
+Allow: /
+
+User-agent: Bingbot
+Disallow: /private/
+Allow: /
+
+User-agent: *
+Disallow: /private/
+Disallow: /admin/
+Disallow: /api/
+Allow: /
+
+# Host directive for Google
+Host: tanstack-start-starter.com
